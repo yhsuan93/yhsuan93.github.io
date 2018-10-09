@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+
+    body {
+        margin: 0 auto;
+        max-width: 1920px;
+        height: 2000px;
+    }
+
+    .nav_fix {
+        position: fixed;
+        padding: 0 20px;
+        width: 100%;
+        top: 0px;
+        left: 0px;
+    }
+
+    .nav_fix_display {
+        position: fixed;
+        padding: 0 20px;
+        width: 100%;
+        top: 0px;
+        left: 0px;
+        display: none;
+    }
+
+
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    .nav_logo {
+        float: left;
+    }
+
+
+    .nav_item {
+
+        display: flex;
+        justify-content: flex-end;
+        -webkit-writing-mode: vertical-lr;
+        /*字直式排*/
+        writing-mode: vertical-lr;
+        flex-direction: column;
+        flex-wrap: wrap;
+        float: right;
+
+    }
+
+
+    .nav_item a {
+        margin-right: 20px;
+        text-decoration: none;
+        color: white;
+        font-family: '微軟正黑體';
+    }
+
+
+    .mobile_nav {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+
+    .mobile_nav_menu {
+        display: none;
+        margin-top: 30px;
+        color: white;
+
+    }
+
+
+    .mobile_menu_item {
+        display: flex;
+        justify-content: center;
+        -webkit-writing-mode: vertical-lr;
+        /*字直式排*/
+        writing-mode: vertical-lr;
+        flex-direction: column;
+        flex-wrap: wrap;
+        display: none;
+    }
+
+
+    .mobile_menu_item.show {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        -webkit-writing-mode: vertical-lr;
+        writing-mode: vertical-lr;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+    }
+
+
+    .mobile_menu_item a {
+        color: white;
+        text-decoration: none;
+        padding: 0 15px;
+        display: block;
+
+    }
+
+    .banner {
+        margin: 0 auto;
+
+    }
+
+    .banner img {
+        width: auto;
+        height: auto;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .content_bg {
+        background-image: url("/pic/feature_bg.png");
+        background-size: cover;
+
+    }
+
+    .content_height {
+        padding: 350px 0;
+    }
+
+    .feature_title {
+        position: absolute;
+        left: 50%;
+        top: 200px;
+        transform: translateX(-50%);
+        color: aliceblue;
+        font-family: '微軟正黑體';
+    }
+
+    .card_style {
+        border: none;
+    }
+
+    .font_style {
+        font-weight: bold;
+        font-family: "微軟正黑體"
+    }
+
+
+    .about_content {
+        background-color: rgb(255, 255, 255);
+        padding: 50px 350px 50px 50px;
+    }
+
+
+
+    .about_content h1 {
+        font-weight: bold;
+        font-family: "微軟正黑體";
+
+    }
+
+    .about_content p {
+        font-family: "微軟正黑體";
+    }
+
+
+
+    .container_bg {
+        background-image: url("/pic/about_bg-02.png");
+        background-size: cover;
+    }
+
+    .container_flex {
+        display: flex;
+        justify-content: space-around;
+        
+        position: relative;
+    }
+
+    .content_padding{
+        padding: 5% 0;
+        background-color: white;
+    }
+
+    .text h1 {
+        font-weight: bold;
+        font-family: "微軟正黑體";
+        padding: 150 0 0 50px;
+    }
+
+    .text p {
+        max-width: 350px;
+        font-family: "微軟正黑體"
+    }
+
+/* .videoWrapper{
+    z-index: 1;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+} */
+
+    .clearfix {
+        clear: both;
+    }
+
+    @media screen and (min-width:700px) {
+        .show {
+            display: none;
+        }
+
+        .mobile_nav {
+            display: flex;
+            justify-content: space-between;
+            display: none;
+        }
+
+    }
+
+
+    @media screen and (max-width:700px) {
+        .nav_logo {
+            display: none;
+        }
+
+        div .navbar a {
+            display: none;
+        }
+
+        .mobile_nav_menu {
+            display: block;
+        }
+
+
+    }
+</style>
+
+<body>
+    <div id="nav_fix" class="nav_fix">
+        <div class="container">
+            <nav class="navbar">
+
+                <div class="nav_logo">
+                    <img src="/pic/logo-03.png" alt="">
+                </div>
+
+                <div class="nav_item active">
+                    <a href="#">炭 火 特 色</a>
+                    <a href="#">關 於 炭 火</a>
+                    <a href="#">炭 火 價 格</a>
+                    <a href="#">炭 火 位 置</a>
+                    <a href="#">聯 絡 炭 火</a>
+                </div>
+
+            </nav>
+
+        </div>
+
+        <nav class="mobile_nav">
+
+            <div class="mobile_nav_logo">
+                <img src="/pic/logo_s.png" alt="">
+            </div>
+
+            <div id="mobile_nav_menu" class="mobile_nav_menu">
+                <i class="fas fa-bars"></i>
+            </div>
+
+        </nav>
+
+        <div class="mobile_menu_item">
+            <ul>
+                <li><a href="#">炭火特色</a></li>
+                <li> <a href="#">關於炭火</a></li>
+                <li><a href="#">炭火價格</a></li>
+                <li><a href="#">炭火位置</a></li>
+                <li><a href="#">聯絡炭火</a></li>
+
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="banner">
+        <img src="/pic/banner1.jpg" alt="">
+
+    </div>
+
+    <div class="container-fluid content_bg">
+        <div class="container content_height position-relative">
+            <div class="feature_title">
+                <h1>炭火燒肉工房特色</h1>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md">
+                    <div class="card border-0">
+                        <img class="card-img-top" src="/pic/feature_1.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title font_style">無煙炭火</h5>
+                            <p class="card-text">炭火的溫度能夠達到350°C以上，可將肉汁都鎖在肉裡面
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md">
+                    <div class="card border-0">
+                        <img class="card-img-top" src="/pic/feature_1.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title font_style">單點吃到飽</h5>
+                            <p class="card-text">炭火日式燒肉滋味，讓你吃飽吃好。不怕你吃~只怕你不來吃</p>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-12 col-md">
+                    <div class="card border-0">
+                        <img class="card-img-top" src="/pic/feature_1.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title font_style">特色食材</h5>
+                            <p class="card-text">新鮮牛舌及產地直送鴕鳥肉搭配老闆特製醃醬，讓你吃到停不下來</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid container_bg">
+        <div class="container container_flex">
+                  <div class="content_padding">
+                        <div class="about_content">
+                                <h1 class="pb-5">關於炭火</h1>
+                                <div class="position_p">
+                                    <p>最火的炭火燒肉工房
+                                        享受真正炭火日式燒肉的滋味，讓你吃飽吃好。
+                                        不怕你來吃~只怕你不吃~
+                                        二小時用餐吃到爽，不要浪費！
+                                        誰知盤中飱，粒粒皆辛苦！
+                                    </p>
+                                </div>
+                            </div>
+                
+                            <div class="videoWrapper embed-responsive embed-responsive-4by3">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/P4X08zjkA2Q" frameborder="0"
+                                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            </div>
+                  </div>
+            
+
+        </div>
+
+    </div>
+
+    <div class="clearfix"></div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+
+
+    <script>
+        var mobile_nav_menu = document.querySelector("#mobile_nav_menu")
+        mobile_nav_menu.onclick = function () {
+            document.querySelector(".mobile_menu_item").classList.toggle("show")
+
+        }
+
+
+        window.onscroll = function () { myFunction() };
+
+        function myFunction() {
+            if (document.body.scrollTop > 110 || document.documentElement.scrollTop > 110) {
+
+                document.querySelector("#nav_fix").classList.add("nav_fix_display");
+
+            } else {
+                document.querySelector("#nav_fix").classList.remove("nav_fix_display");
+            }
+        }
+
+
+        var lastScrollTop = 0;
+
+        window.addEventListener("scroll", function () {
+            var st = window.pageYOffset || document.documentElement.scrollTop;
+            if (st > lastScrollTop) {
+                // downscroll code
+                console.log("up");
+
+            } else {
+                // upscroll code
+                document.querySelector("#nav_fix").classList.remove("nav_fix_display");
+                console.log("down");
+            }
+            lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+        }, false);
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
