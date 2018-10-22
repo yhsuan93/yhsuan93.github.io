@@ -17,6 +17,7 @@ body {
     top: 0px;
     left: 0px;
     z-index: 99;
+    background-image: linear-gradient(#000000, rgba(0, 0, 0, 0));
 }
 
 .nav_fix_display {
@@ -118,6 +119,7 @@ body {
 
 }
 
+
 .banner_bg1 img {
     width: auto;
     height: auto;
@@ -184,7 +186,6 @@ body {
 }
 
 .feature_title h1 {
-    color: aliceblue;
     font-weight: bold;
     font-family: '微軟正黑體';
     color: rgb(235, 176, 103);
@@ -265,61 +266,41 @@ body {
     left: 700px;
 }
 
-.price_bg {
-    background-color: rgb(39, 39, 39);
+.price_bg{
+    background-color: #1d1d1d;
 }
 
-.price_title_center {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 3%;
+.price_title{
+    padding: 75px 0px 50px 0px;
 }
 
-.price_title_center h3 {
-
-    font-family: "微軟正黑體";
-    color: rgb(235, 176, 103);
-}
-
-.price_padding {
-    padding: 8% 0;
-}
-
-.price_col_center {
-    display: flex;
-    justify-content: center;
-}
-
-.price_col_center h1 {
+.price_title h1 {
     font-weight: bold;
-    font-family: "微軟正黑體";
-    color: rgb(235, 176, 103);
+    font-family: '微軟正黑體';
+    color: rgb(185, 125, 51);
+    text-align: center;
 }
 
-.price_col_center p {
-    font-family: "微軟正黑體";
-    color: rgb(201, 141, 68);
+.price_align{
+    text-align: center;
 }
 
-.text-output {
-    outline: unset;
-    -webkit-appearance: none;
-    background-color: rgb(39, 39, 39);
-    -webkit-rtl-ordering: logical;
+.counter-value{
     font-weight: bold;
-    font-family: "微軟正黑體";
-    color: rgb(235, 176, 103);
-    cursor: text;
-    padding: 1px;
-    border: none;
+    font-size: 36px;
+    color: rgb(185, 125, 51);
 }
 
+.price_align p{
+    color:aliceblue;
+    padding: 30px 0px 75px 0px;
+}
 
 .clearfix {
     clear: both;
 }
 
-@media screen and (min-width:700px) {
+@media screen and (min-width:702px) {
     .show {
         display: none;
     }
@@ -333,20 +314,13 @@ body {
 }
 
 
-@media screen and (max-width:701px) {
+@media screen and (max-width:702px) {
     
     .navbar{
         display: none;
     }
     
-    .nav_logo {
-        display: none;
-    }
-
-    div .navbar a {
-        display: none;
-    }
-
+   
     .mobile_nav_menu {
         display: block;
     }

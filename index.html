@@ -17,9 +17,7 @@
 <link rel="stylesheet" href="/style.css">
 
 
-<style>
-   
-</style>
+
 
 <body>
     <div id="nav_fix" class="nav_fix">
@@ -134,70 +132,64 @@
         </div>
     </div>
 
-    <!-- <div class="container-fluid container_bg">
-        <div class="container container_flex">
-            <div class="content_padding">
-                <div class="about_content">
-                    <h1 class="pb-5">關於炭火</h1>
-                    <div class="position_p">
-                        <p>最火的炭火燒肉工房
-                            享受真正炭火日式燒肉的滋味，讓你吃飽吃好。
-                            不怕你來吃~只怕你不吃~
-                            二小時用餐吃到爽，不要浪費！
-                            誰知盤中飱，粒粒皆辛苦！
-                        </p>
-                    </div>
-                </div>
-
-                <div class="videoWrapper ">
-                    <div class="embed-responsive embed-responsive-4by3">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/P4X08zjkA2Q"
-                            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                    </div>
-                </div>
-
-            </div>
-
-
-        </div>
-
-    </div> -->
-
-
     <div class="container-fluid price_bg">
-        <div class="container">
-            <div class="price_padding">
-                <div class="row price_title_center">
-                    <h3>炭火價格</h3>
+            <div class="container">
+                    <div class="price_title">
+                        <h1>炭火燒肉價格</h1>
+                    </div>
+                    <div id="counter" class="counter">
+                        <div class="row">
+                            <div class="col-md price_align">
+            
+                                    <div class="d-flex justify-content-center">
+                                            <div class="counter-value" data-count="0">1000</div>
+                                            <div class="align-self-end" style="color:aliceblue;">元</div>
+                                        </div>
+            
+                                <div>
+                                    <p>身高100公分以下</p>
+                                </div>
+            
+                            </div>
+            
+                            <div class="col-md price_align">
+                                <div class="d-flex justify-content-center">
+                                    <div class="counter-value" data-count="400">1000</div>
+                                    <span class="counter-value">/</span>
+                                    <div class="counter-value" data-count="500">1000</div>
+                                    <div class="align-self-end" style="color:aliceblue;">元</div>
+                                </div>
+                                <div>
+                                    <p>平日午餐時段</p>
+                                </div>
+            
+                            </div>
+            
+                            <div class="col-md price_align">
+                                <div class="d-flex justify-content-center">
+                                    <div class="counter-value" data-count="450">1000</div>
+                                    <span class="counter-value">/</span>
+                                    <div class="counter-value" data-count="550">1000</div>
+                                    <div class="align-self-end" style="color:aliceblue;">元</div>
+                                </div>
+                                <div>
+                                    <p>晚餐及假日時段</p>
+                                </div>
+            
+                            </div>
+            
+                        </div>
+            
+                    </div>
                 </div>
-                <div class="row">
-                    <div class="col-12 col-md price_col_center">
-                        <div id="domAttributes_free">
-                            <input class="text-output" value="21">
-                            <p>身高100公分以下</p>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md price_col_center">
-                        <div id="domAttributes_450">
-                            <input class="text-output" value="21">
-                            <p>平日午餐時段</p>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md price_col_center">
-                        <div id="domAttributes_550">
-                            <input class="text-output" value="21">
-                            <p>晚餐及假日時段</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
+   
 
-  
-        
+
+
+
+
+
 
 
 
@@ -214,7 +206,13 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js"></script>
+
     <script src="/js/anime.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+
+
 
 
     <script>
@@ -275,63 +273,45 @@
         }, false);
 
 
-        // var domAttributes = anime({
-        //     targets: '#domAttributes_free input',
-        //     value: free,
-        //     round: 1000,
-        //     easing: 'easeInOutExpo'
-        // });
+
+    </script>
 
 
-        // var domAttributes = anime({
-        //     targets: '#domAttributes_450 input',
-        //     value: 450,
-        //     round: 1000,
-        //     easing: 'easeInOutExpo'
-        // });
 
-        // var domAttributes = anime({
-        //     targets: '#domAttributes_550 input',
-        //     value: 550,
-        //     round: 1000,
-        //     easing: 'easeInOutExpo'
-        // });
+    <script>
+        var a = 0;
+        $(window).scroll(function () {
 
+            var oTop = $('#counter').offset().top - window.innerHeight;
+            console.log("tesst")
+            if (a == 0 && $(window).scrollTop() > oTop) {
+                $('.counter-value').each(function () {
+                    var $this = $(this),
+                        countTo = $this.attr('data-count');
+                    $({
+                        countNum: $this.text()
+                    }).animate({
+                        countNum: countTo
+                    },
 
-var a = 0;
-$(window).scroll(function() {
+                        {
 
-  var oTop = $('#counter').offset().top - window.innerHeight;
-  if (a == 0 && $(window).scrollTop() > oTop) {
-    $('.counter-value').each(function() {
-      var $this = $(this),
-        countTo = $this.attr('data-count');
-      $({
-        countNum: $this.text()
-      }).animate({
-          countNum: countTo
-        },
+                            duration: 2000,
+                            easing: 'swing',
+                            step: function () {
+                                $this.text(Math.floor(this.countNum));
+                            },
+                            complete: function () {
+                                $this.text(this.countNum);
+                                //alert('finished');
+                            }
 
-        {
-
-          duration: 2000,
-          easing: 'swing',
-          step: function() {
-            $this.text(Math.floor(this.countNum));
-          },
-          complete: function() {
-            $this.text(this.countNum);
-            //alert('finished');
-          }
+                        });
+                });
+                a = 1;
+            }
 
         });
-    });
-    a = 1;
-  }
-
-});
-
-
     </script>
 
 </body>
