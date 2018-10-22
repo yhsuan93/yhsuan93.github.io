@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<Style>
+    * {
+        box-sizing: border-box;
+    }
+
+    .section {
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+
+    body {
+        /* margin: 0px;
+        background-color: black; */
+        height: 100%;
+        /* width: 100vh; */
+        background-image: url("/MyHomePage-v01/img/239393006.jpg");
+        background-size: cover;
+        position: center;
+        background-attachment: fixed;
+        /* opacity: 0.5; */
+    }
+
+    /* .container { */
+    /* max-width: 1140px;
+        margin: 0 auto; */
+    /* } */
+
+    .container .img_top img {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .container .nav {
+        display: flex;
+        background-color: #444;
+        justify-content: space-between;
+        /* align-items: flex-end; */
+    }
+
+    .container .nav .nav_link {
+        /* width: auto; */
+        display: flex;
+        /* flex-direction: column; */
+    }
+
+    .container .nav .logo .mobile-navbar ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .container .nav a {
+        color: white;
+        display: flex;
+        align-items: flex-end;
+        padding: 15px 15px;
+        /* padding: 10px 10px; */
+        text-decoration: none;
+        font-size: 25px;
+    }
+
+    .mobile-nav-toggle i {
+        color: white;
+        font-size: 50px;
+    }
+
+    .mobile-navbar {
+        display: none;
+        border-top: 1px solid white;
+        background-color: #444;
+        padding: 15px 15px;
+    }
+
+    .mobile-nav-toggle {
+        display: none;
+        margin-top: 10px;
+        float: right;
+        top: 10px;
+        border: 1px solid white;
+        padding: 4px 10px;
+        border-radius: 5px;
+    }
+
+    .mobile-navbar.active {
+        display: none;
+    }
+
+    .mobile-navbar ul {
+        list-style-type: none;
+        padding: 0 40px;
+    }
+
+    .mobile-navbar ul li a {
+        display: block;
+        border-bottom: 1px solid white;
+        padding: 10px 0;
+    }
+
+    .mobile-navbar a {
+        color: white;
+    }
+
+    .container .nav .logo {
+        /* font-family: 'Anton', sans-serif; */
+        display: flex;
+        padding: 10px;
+        /* flex-direction: column; */
+    }
+
+    /* .container .nav .logo img{ */
+    /* min-width: 100%; */
+    /* } */
+
+    .section .container .main {
+        /* justify-content: space-between; */
+        /* margin: 0 auto; */
+        display: flex;
+        /* position: relative; */
+        /* height: 100px; */
+    }
+
+    .section .container .main .main_article {
+        position: relative;
+        /* justify-content: center; */
+        padding: 0 10px;
+        width: 1000px;
+        background-color: #444;
+        /* border:1px solid white; */
+        border-radius: 10px;
+    }
+
+    .section .container .main .main_article .article_1 {
+
+        /* font-size: 20px; */
+        color: white;
+        /* text-indent: 100px; */
+        padding: 0 10px;
+        font-family: 'Anton', sans-serif;
+        /* min-height: 170px; */
+    }
+
+    div .title_1 {
+        color: white;
+        /* border-radius: 1px solid white; */
+    }
+
+    .section .container .main .videoWrapper {
+        margin: 0 10px;
+        position: relative;
+        /* padding-bottom: 56.25%; */
+        /* 16:9 */
+        /* padding-top: 25px; */
+        /* height: 500px; */
+        width: 100%;
+    }
+
+    .section .container .main .videoWrapper iframe {
+        /* z-index: 1; */
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        /* min-height: 170px; */
+    }
+
+
+    .clearfix {
+        clear: both;
+    }
+
+    .container .nav a:hover {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    /* .container hr {
+        /* color: white; */
+    /* border-radius: 1px dashed white;
+    } */
+
+    .section .container .main .main_img h3 {
+        color: white;
+    }
+
+    .section .container .main .main_img ul li {
+        color: white;
+        font-size: 20px;
+    }
+
+    .section .container .main .main_img {
+        /* display: flex; */
+        /* justify-content: space-around; */
+        /* width: 500px; */
+
+    }
+
+    .section .container .main {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .section .container .main .main_img .Jesse {
+        margin-top: 0;
+        padding: 10px;
+        background-color: #444;
+        color: white;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .section .container .main .main_img .Joel {
+        padding: 10px;
+        margin-top: 0;
+        background-color: #444;
+        color: white;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .section .container .main .main_img .Jesse_img {
+        height: 100%;
+        width: 300px;
+        border-radius: 10px 10px 0 0;
+        background-image: url("/MyHomePage-v01/img/伊森·柯恩 Ethan Jesse Coen.jpg");
+        background-size: cover;
+        /* position: center; */
+    }
+
+    .section .container .main .main_img .Joel_img {
+        height: 100%;
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+        background-image: url("/MyHomePage-v01/img/喬爾·柯恩 Joel Coen.jpg");
+        background-size: cover;
+        /* position: center; */
+    }
+
+    @media screen and (max-width:460px) {
+        .container .nav .nav_link {
+            display: none;
+        }
+
+        .mobile-nav-toggle {
+            display: block;
+        }
+
+        .mobile-navbar.active {
+            display: block;
+        }
+
+        /* .section .container .main .box{
+         width: 100%;
+        } */
+
+        .container .nav .logo {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            text-align: center;
+        }
+    }
+
+    /* @media only screen and (min-width:480px) {
+        .container .nav .nav_link{
+            flex-direction: row;
+            /* display: flex; */
+    /* justify-content: flex-end; */
+    /* }  */
+    /* } */
+</Style>
+
+<body>
+    <div class="section">
+        <div class="container">
+            <div class="nav">
+                <div class="logo" id="mobile-nav-toggle" class="mobile-nav-toggle">
+                    <img src="/MyHomePage-v01/img/CgA.jpg" alt="logo">
+                    <div class="mobile-navbar">
+                        <ul>
+                            <li><a class="link" href="#1">劇情</a></li>
+                            <li><a class="link" href="#2">導演</a></li>
+                            <li><a class="link" href="#3">人物</a></li>
+                            <li><a class="link" href="#4">小說</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="nav_link">
+                    <a href="#">劇情</a>
+                    <a href="#">導演</a>
+                    <a href="#">人物</a>
+                    <a href="#">小說</a>
+                </div>
+            </div>
+            <div class="img_top">
+                <img src="/MyHomePage-v01/img/img_top.jpg" alt="NO COUNTRY FOR OLD MEN">
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!-- <div class="container"> -->
+    <!-- <hr /> -->
+    <!-- </div> -->
+    <div class="section">
+        <div class="container">
+            <div>
+                <h2 class="title_1">劇情</h2>
+            </div>
+            <div class="main">
+                <!-- <div class="box"> -->
+                <div class="main_article">
+                    <p class="article_1">
+                        【險路勿近】一片的故事從羅倫摩斯（喬許布洛林飾）發現一輛車旁都是死人的小貨卡車展開。
+                        他在後車廂找到一大堆海洛因和兩百萬美元現鈔，當他把這兩百萬美金現鈔拿走之後，
+                        就引起了一連串的暴力事件，就連當地年老又倦勤的貝爾警長（湯米李瓊斯飾）都無法阻止這些暴力事件。
+                        摩斯急於逃避黑道的追殺，尤其是一名只要一彈手指，就能讓人死於喪身之地的神秘危險人物（哈維爾巴登飾）。
+                        這部電影不但是一部解構美國黑幫電影的上乘佳作，故事也涵蓋了恆久以來人類都在探討的主題，
+                        以及現代社會每天上演的暴力事件。
+                        <p>
+                </div>
+                <!-- </div> -->
+                <!-- <div class="box"> -->
+                <div class="videoWrapper">
+                    <iframe src="https://www.youtube.com/embed/YDjE2w_7IjY" frameborder="0" allow="autoplay; encrypted-media"
+                        allowfullscreen></iframe>
+                </div>
+                <!-- </div> -->
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container">
+            <div>
+                <h2 class="title_1">導演</h2>
+            </div>
+            <div class="main">
+                <div class="main_img">
+                    <div class="Jesse_img"></div>
+                    <div class="Jesse">
+                        <h3>伊森·柯恩 Ethan Jesse Coen</h3>
+                        <ul>
+                            <li>
+                                <p>出生:1957年9月21日（60歲）</p>
+                            </li>
+                            <li>
+                                <p>美國明尼蘇達州明尼亞波利斯</p>
+                            </li>
+                            <li>
+                                <p>教育程度:美國普林斯頓大學</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="main_img">
+                    <div class="Joel_img"></div>
+                    <div class="Joel">
+                        <h3>喬爾·柯恩 Joel Coen</h3>
+                        <ul>
+                            <li>
+                                <p>出生:1954年11月29日（63歲）</p>
+                            </li>
+                            <li>
+                                <p>美國明尼蘇達州明尼亞波利斯</p>
+                            </li>
+                            <li>
+                                <p>教育程度:美國紐約大學</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var mobileNavToggle = document.querySelector("#mobile-nav-toggle");
+        mobileNavToggle.onclick = function () {
+            document.querySelector(".mobile-navbar").classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

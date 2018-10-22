@@ -1,0 +1,395 @@
+* {
+    box-sizing: border-box;
+    font-family: "微軟正黑體";
+}
+
+
+body {
+    margin: 0 auto;
+    max-width: 1920px;
+    height: 2000px;
+}
+
+.nav_fix {
+    position: fixed;
+    padding: 0 20px;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 99;
+}
+
+.nav_fix_display {
+    position: fixed;
+    padding: 0 20px;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0px;
+}
+
+
+.nav_logo {
+    float: left;
+
+}
+
+
+.nav_item {
+
+    display: flex;
+    justify-content: flex-end;
+    -webkit-writing-mode: vertical-lr;
+    /*字直式排*/
+    writing-mode: vertical-lr;
+    flex-direction: column;
+    flex-wrap: wrap;
+    float: right;
+
+}
+
+
+.nav_item a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+    font-family: '微軟正黑體';
+}
+
+
+.mobile_nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+.mobile_nav_menu {
+    display: none;
+    margin-top: 30px;
+    color: white;
+
+}
+
+
+.mobile_menu_item {
+    display: flex;
+    justify-content: center;
+    -webkit-writing-mode: vertical-lr;
+    /*字直式排*/
+    writing-mode: vertical-lr;
+    flex-direction: column;
+    flex-wrap: wrap;
+    display: none;
+}
+
+
+.mobile_menu_item.show {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    -webkit-writing-mode: vertical-lr;
+    writing-mode: vertical-lr;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+
+
+.mobile_menu_item a {
+    color: white;
+    text-decoration: none;
+    padding: 0 15px;
+    display: block;
+
+}
+
+.banner {
+    margin: 0 auto;
+
+}
+
+.banner_bg1 img {
+    width: auto;
+    height: auto;
+    width: 100%;
+    height: 100%;
+
+}
+
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+    background-image: url('/pic/all_next_btn-02.png');
+    right: 10px;
+    left: auto;
+}
+
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+    background-image: url('/pic/all_prev_btn-02.png');
+    left: 10px;
+    right: auto;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #ffffff;
+}
+
+.swiper-pagination-bullet-active-next {
+    opacity: 1;
+    background:rgb(235, 176, 103);
+}
+
+.swiper-pagination-bullet-active-next-next {
+    opacity: 1;
+    background:rgb(235, 176, 103);
+}
+
+.swiper-pagination-bullet-active-prev {
+    opacity: 1;
+    background:rgb(235, 176, 103);
+}
+
+.swiper-pagination-bullet-active-prev-prev {
+    opacity: 1;
+    background:rgb(235, 176, 103);
+}
+
+
+
+.content_bg {
+    background-image: url("/pic/feature_bg.png");
+    background-size: cover;
+
+}
+
+.content_height {
+    padding: 150px 0;
+}
+
+.feature_title {
+    position: absolute;
+    left: 50%;
+    top: 8%;
+    transform: translateX(-50%);
+
+}
+
+.feature_title h1 {
+    color: aliceblue;
+    font-weight: bold;
+    font-family: '微軟正黑體';
+    color: rgb(235, 176, 103);
+}
+
+
+.card_style {
+    border: none;
+}
+
+.font_style {
+    font-weight: bold;
+    font-family: "微軟正黑體";
+    color: rgb(41, 41, 41);
+}
+
+.card-text {
+    font-family: "微軟正黑體";
+
+}
+
+
+.about_content {
+    background-color: rgb(255, 255, 255);
+    padding: 50px 350px 50px 50px;
+}
+
+
+
+.about_content h1 {
+    font-weight: bold;
+    font-family: "微軟正黑體";
+    color: rgb(235, 176, 103);
+
+}
+
+.about_content p {
+    font-family: "微軟正黑體";
+    color: rgb(201, 141, 68);
+}
+
+
+
+.container_bg {
+    background-image: url("/pic/about_bg-02.png");
+    background-size: cover;
+}
+
+.container_flex {
+    display: flex;
+    justify-content: space-around;
+
+    position: relative;
+}
+
+.content_padding {
+    padding: 5% 0;
+    background-color: white;
+}
+
+.text h1 {
+    font-weight: bold;
+    font-family: "微軟正黑體";
+    padding: 150 0 0 50px;
+}
+
+.text p {
+    max-width: 350px;
+    font-family: "微軟正黑體"
+}
+
+.videoWrapper {
+    z-index: 1;
+    width: 350px;
+    height: 450px;
+    position: absolute;
+    top: 150px;
+    left: 700px;
+}
+
+.price_bg {
+    background-color: rgb(39, 39, 39);
+}
+
+.price_title_center {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3%;
+}
+
+.price_title_center h3 {
+
+    font-family: "微軟正黑體";
+    color: rgb(235, 176, 103);
+}
+
+.price_padding {
+    padding: 8% 0;
+}
+
+.price_col_center {
+    display: flex;
+    justify-content: center;
+}
+
+.price_col_center h1 {
+    font-weight: bold;
+    font-family: "微軟正黑體";
+    color: rgb(235, 176, 103);
+}
+
+.price_col_center p {
+    font-family: "微軟正黑體";
+    color: rgb(201, 141, 68);
+}
+
+.text-output {
+    outline: unset;
+    -webkit-appearance: none;
+    background-color: rgb(39, 39, 39);
+    -webkit-rtl-ordering: logical;
+    font-weight: bold;
+    font-family: "微軟正黑體";
+    color: rgb(235, 176, 103);
+    cursor: text;
+    padding: 1px;
+    border: none;
+}
+
+
+.clearfix {
+    clear: both;
+}
+
+@media screen and (min-width:700px) {
+    .show {
+        display: none;
+    }
+
+    .mobile_nav {
+        display: flex;
+        justify-content: space-between;
+        display: none;
+    }
+
+}
+
+
+@media screen and (max-width:701px) {
+    
+    .navbar{
+        display: none;
+    }
+    
+    .nav_logo {
+        display: none;
+    }
+
+    div .navbar a {
+        display: none;
+    }
+
+    .mobile_nav_menu {
+        display: block;
+    }
+
+    .feature_title {
+        position: absolute;
+        left: 50%;
+        top: 3%;
+        padding: 5% 0;
+        transform: translateX(-50%);
+    }
+
+    .feature_title h1 {
+        font-weight: bold;
+        font-family: "微軟正黑體";
+        font-size: 26px;
+
+
+    }
+
+    /* .mobile_box {
+        margin: 5% 0;
+    } */
+
+    .videoWrapper {
+        z-index: 1;
+        width: 350px;
+        height: 450px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+
+    .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+       display: none;
+    }
+    
+    .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+        display: none;
+    }
+
+    .card_padding{
+        padding-top:10px; 
+    }
+
+}
