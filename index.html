@@ -19,6 +19,7 @@
 
 
 
+
 <body>
     <div id="nav_fix" class="nav_fix">
         <div class="container">
@@ -29,9 +30,9 @@
                 </div>
 
                 <div class="nav_item active">
-                    <a href="#">炭 火 特 色</a>
+                    <a href="#feature_title">炭 火 特 色</a>
                     <a href="#">關 於 炭 火</a>
-                    <a href="#">炭 火 價 格</a>
+                    <a href="#price_title">炭 火 價 格</a>
                     <a href="#">炭 火 位 置</a>
                     <a href="#">聯 絡 炭 火</a>
                 </div>
@@ -39,32 +40,36 @@
             </nav>
 
         </div>
+    </div>
 
-        <nav class="mobile_nav">
 
-            <div class="mobile_nav_logo">
+    <nav class="mobile_nav">
+        <div class="row">
+            <div class="col-6 mobile_nav_logo">
                 <img src="/pic/logo_s.png" alt="炭火燒肉工房">
             </div>
 
-            <div id="mobile_nav_menu" class="mobile_nav_menu">
+            <div id="mobile_nav_menu" class="col-6 mobile_nav_menu">
                 <i class="fas fa-bars fa-1x"></i>
             </div>
+        </div>
 
-        </nav>
 
-        <div class="mobile_menu_item">
-            <ul>
-                <li><a href="#">炭火特色</a></li>
-                <li> <a href="#">關於炭火</a></li>
-                <li><a href="#">炭火價格</a></li>
+    </nav>
+
+
+    <div class="mobile_menu_item">
+        <div id="nav_close" class="nav_close">
+            <ul class="list_style">
+                <li><a href="#feature_title">炭火特色</a></li>
+                <li><a href="#">關於炭火</a></li>
+                <li><a href="#price_title">炭火價格</a></li>
                 <li><a href="#">炭火位置</a></li>
                 <li><a href="#">聯絡炭火</a></li>
 
             </ul>
-
         </div>
     </div>
-
 
     <div class="swiper-container">
         <div class="swiper-wrapper">
@@ -87,7 +92,7 @@
 
     <div class="container-fluid content_bg">
         <div class="container content_height position-relative">
-            <div class="feature_title">
+            <div id="feature_title" class="feature_title">
                 <h1>炭火燒肉工房特色</h1>
             </div>
             <div class="mobile_box">
@@ -132,58 +137,95 @@
         </div>
     </div>
 
-    <div class="container-fluid price_bg">
-            <div class="container">
-                    <div class="price_title">
-                        <h1>炭火燒肉價格</h1>
+
+    <div class="container">
+        <div id="price_title" class="price_title">
+            <h1>炭火燒肉價格</h1>
+        </div>
+        <div id="counter" class="counter">
+            <div class="row">
+                <div class="col-md price_align">
+
+                    <div class="d-flex justify-content-center">
+                        <div class="counter-value" data-count="0">1000</div>
+                        <div class="align-self-end" style="color:aliceblue;">元</div>
                     </div>
-                    <div id="counter" class="counter">
-                        <div class="row">
-                            <div class="col-md price_align">
-            
-                                    <div class="d-flex justify-content-center">
-                                            <div class="counter-value" data-count="0">1000</div>
-                                            <div class="align-self-end" style="color:aliceblue;">元</div>
-                                        </div>
-            
-                                <div>
-                                    <p>身高100公分以下</p>
-                                </div>
-            
-                            </div>
-            
-                            <div class="col-md price_align">
-                                <div class="d-flex justify-content-center">
-                                    <div class="counter-value" data-count="400">1000</div>
-                                    <span class="counter-value">/</span>
-                                    <div class="counter-value" data-count="500">1000</div>
-                                    <div class="align-self-end" style="color:aliceblue;">元</div>
-                                </div>
-                                <div>
-                                    <p>平日午餐時段</p>
-                                </div>
-            
-                            </div>
-            
-                            <div class="col-md price_align">
-                                <div class="d-flex justify-content-center">
-                                    <div class="counter-value" data-count="450">1000</div>
-                                    <span class="counter-value">/</span>
-                                    <div class="counter-value" data-count="550">1000</div>
-                                    <div class="align-self-end" style="color:aliceblue;">元</div>
-                                </div>
-                                <div>
-                                    <p>晚餐及假日時段</p>
-                                </div>
-            
-                            </div>
-            
-                        </div>
-            
+
+                    <div>
+                        <p>身高100公分以下</p>
+                    </div>
+
+                </div>
+
+                <div class="col-md price_align">
+                    <div class="d-flex justify-content-center">
+                        <div class="counter-value" data-count="400">1000</div>
+                        <span class="counter-value">/</span>
+                        <div class="counter-value" data-count="500">1000</div>
+                        <div class="align-self-end" style="color:aliceblue;">元</div>
+                    </div>
+                    <div>
+                        <p>平日午餐時段</p>
+                    </div>
+
+                </div>
+
+                <div class="col-md price_align">
+                    <div class="d-flex justify-content-center">
+                        <div class="counter-value" data-count="450">1000</div>
+                        <span class="counter-value">/</span>
+                        <div class="counter-value" data-count="550">1000</div>
+                        <div class="align-self-end" style="color:aliceblue;">元</div>
+                    </div>
+                    <div>
+                        <p>晚餐及假日時段</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="locate_title">
+            <h1>炭火燒肉位置</h1>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div class="min_store">
+
+                    <div>
+                        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3641.195637991457!2d120.65453401476006!3d24.129766684403783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693dadb7e23c53%3A0x3979bd30356975ae!2zNDAy5Y-w5Lit5biC5Y2X5Y2A5LiJ5rCR6KW_6LevMzIx6Jmf!5e0!3m2!1szh-TW!2stw!4v1540393892035"
+                            width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div>
                 </div>
+            </div>
+
+            <div class="col-4">
+                <div class="min_store">
+
+                    <div>
+                        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3641.195637991457!2d120.65453401476006!3d24.129766684403783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693dadb7e23c53%3A0x3979bd30356975ae!2zNDAy5Y-w5Lit5biC5Y2X5Y2A5LiJ5rCR6KW_6LevMzIx6Jmf!5e0!3m2!1szh-TW!2stw!4v1540393892035"
+                            width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="min_store">
+
+                    <div>
+                        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3641.195637991457!2d120.65453401476006!3d24.129766684403783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693dadb7e23c53%3A0x3979bd30356975ae!2zNDAy5Y-w5Lit5biC5Y2X5Y2A5LiJ5rCR6KW_6LevMzIx6Jmf!5e0!3m2!1szh-TW!2stw!4v1540393892035"
+                            width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-   
+
 
 
 
@@ -209,7 +251,9 @@
 
     <script src="/js/anime.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous">
+        </script>
+
 
 
 
@@ -276,7 +320,14 @@
 
     </script>
 
+    <script>
+        var nav_close = document.querySelector("#nav_close")
 
+        nav_close.onclick = function () {
+            document.querySelector(".mobile_menu_item").classList.toggle("show")
+        }
+
+    </script>
 
     <script>
         var a = 0;
