@@ -356,6 +356,10 @@ body {
     align-items: center;
 }
 
+.radio_text_padding{
+    padding-left: 10px;
+}
+
 
 .clearfix {
     clear: both;
