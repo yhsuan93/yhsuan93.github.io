@@ -93,7 +93,7 @@
     <div class="container-fluid content_bg">
         <div class="container content_height position-relative">
             <div class="feature_title">
-                <h1  id="feature_title">炭火燒肉特色</h1>
+                <h1 id="feature_title">炭火燒肉特色</h1>
             </div>
             <div class="mobile_box">
                 <div class="row">
@@ -253,12 +253,12 @@
 
                 <div class="QA_box">
                     <select name="my_html_select_box">
+                        <option>服務態度</option>
                         <option>菜色 </option>
                         <option>環境</option>
-                        <option>服務態度</option>
                     </select>
                 </div class="QA_p_flex">
-                <p>您對我們<span id="demo">菜色</span>的滿意程度等級：</p>
+                <p>您對我們<span id="demo">服務態度</span>的滿意程度等級：</p>
 
                 <div class="radio_btn">
                     <div class="radio_text d-flex flex-row">
@@ -288,7 +288,11 @@
 
             </div>
 
-            <div class="col-12 col-md-6"></div>
+            <div class="col-12 col-md-6 mobile_demo_noe">
+                <div id="pic_demo">
+                    <img src="/pic/QA1.png" alt="炭火燒烤工房服務態度">
+                </div>
+            </div>
         </div>
     </div>
 
@@ -316,7 +320,7 @@
 
                     <div class="row">
                         <div class="col footer_copyright">
-                                <p>Copyright © 2018 炭火燒肉工房. All rights reserved</p>
+                            <p>Copyright © 2018 炭火燒肉工房. All rights reserved</p>
                         </div>
                     </div>
                 </div>
@@ -464,12 +468,29 @@
     <script>
         $('select').on('change', function () {
 
+            var pic_demo = document.querySelector("#pic_demo")
+            
+            
+
             document.getElementById("demo").innerHTML = this.value;
             // $("#demo").html(this.value); 同上行
+
+            if (this.value == '服務態度'){
+                pic_demo.innerHTML = '<img src="/pic/QA1.png" alt="">'
+            }
+            else if(this.value == '菜色'){
+                pic_demo.innerHTML = '<img src="/pic/QA2.png" alt="">'
+
+            }
+            else if(this.value == '環境'){
+                pic_demo.innerHTML = '<img src="/pic/QA3.png" alt="">'
+
+            }
 
         });
 
     </script>
+
 
 </body>
 
