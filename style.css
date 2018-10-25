@@ -17,7 +17,7 @@ body {
     top: 0px;
     left: 0px;
     z-index: 99;
-    background-image: linear-gradient(#000000, rgba(0, 0, 0, 0));
+    background-image: linear-gradient(#000000 0%, rgba(26, 35, 51, 0));
 }
 
 .nav_fix_display {
@@ -205,27 +205,6 @@ body {
 }
 
 
-.about_content {
-    background-color: rgb(255, 255, 255);
-    padding: 50px 350px 50px 50px;
-}
-
-
-
-.about_content h1 {
-    font-weight: bold;
-    font-family: "微軟正黑體";
-    color: rgb(235, 176, 103);
-
-}
-
-.about_content p {
-    font-family: "微軟正黑體";
-    color: rgb(201, 141, 68);
-}
-
-
-
 .container_bg {
     background-image: url("/pic/about_bg-02.png");
     background-size: cover;
@@ -271,7 +250,7 @@ body {
 .price_title h1 {
     font-weight: bold;
     font-family: '微軟正黑體';
-    color: rgb(185, 125, 51);
+    color: rgb(235, 176, 103);
     text-align: center;
 }
 
@@ -297,7 +276,7 @@ body {
 .locate_title h1 {
     font-weight: bold;
     font-family: '微軟正黑體';
-    color: rgb(185, 125, 51);
+    color: rgb(235, 176, 103);
     text-align: center;
 }
 
@@ -435,8 +414,52 @@ body {
         display: none;
     }
 
-    .card_padding{
-        padding-top:10px; 
+    .feature_content_height {
+        padding: 150px 0px 30px 0px;
+    }
+
+    .feature_card_padding{
+        padding-bottom: 30px; 
+    }
+
+    .price_title h1{
+        font-weight: bold;
+        font-family: "微軟正黑體";
+        font-size: 26px;
+
+    }
+
+    .price_align p{
+        color:aliceblue;
+        padding: 15px 0px 50px 0px;
+    }
+
+    .locate_title {
+        padding: 50px 0px 50px 0px;
+    }
+
+    .locate_title h1{
+        font-weight: bold;
+        font-family: "微軟正黑體";
+        font-size: 26px;
+
+    }  
+
+    .map_padding{
+        padding-bottom: 20px;
+    }
+
+    .locate_mobile_center{
+        text-align: center;
+        padding-bottom: 40px;
+    }
+
+    .locate_mobile_center h3{
+        padding-bottom: 0px;
+    }
+
+    .map_attention{
+        margin-top: 25px;
     }
 
 }
