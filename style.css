@@ -343,6 +343,10 @@ body {
     padding-left: 10px;
 }
 
+#pic_demo img{
+    width: 100%;
+}
+
 .col_footer_paddig{
     padding-top: 75px;
 }
